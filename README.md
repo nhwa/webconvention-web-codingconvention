@@ -64,6 +64,36 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 </body>
 ```
 
+#### 8. css 사용 방법
+- 기본적으로 외부 스타일 시트를 사용하는 것을 원칙으로 하며, rel, href, type 순으로 작성한다.
+- <head> 태그 사이에 선언한다.
+```html
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+```
+
+#### 9. javascript 사용 방법
+- 기본적으로 외부 자바스크립트 파일을 사용하는 것을 원칙으로 하며, type, src 순으로 작성한다.
+- 코드의 양이 많지 않은 경우 내부 스크립트 코드로 작성한다.
+```html
+  <script type="text/javascript" src="script/script.js">
+  </body>
+```
+- <body> 태그 최하단 선언을 우선시하지만 특수한 경우 <head> 태그 사이에 선언한다.
+  
+```html
+<!--구글 Analytics 태그 : head 태그 사이에 스크립트 사용 권장-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72047520-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-72047520-1");
+  </script>
+```
+
+
 ### HTML 요소 작성 규칙
 
 #### 1. <html>
@@ -74,7 +104,7 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 
 #### 2. <head>
 meta, link, title, script, style 순서로 요소를 선언한다.
-단, 
+
   
   
 
