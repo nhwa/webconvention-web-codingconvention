@@ -78,13 +78,13 @@ DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성한다.
 
 ### HTML 요소 작성 규칙
 
-#### 1. <html>
+#### 1. < html >
 다음과 같이 lang 애트리뷰트를 선언하며 class 애트리뷰트는 선언하지 않는다.
 ```html
 <html lang="ko">
 ```
 
-#### 2. <head>
+#### 2. < head >
 meta, link, title, script, style 순서로 요소를 선언한다.
 ```html
 <head>
