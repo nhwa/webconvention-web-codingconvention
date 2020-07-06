@@ -7,8 +7,8 @@ HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 
 #### 1. W3C Validation
 - HTML은 해당 DTD 명세에 맞게 작성하며, W3C validation을 통과해야 한다.
-- 단, HTML5 DTD 선언 시 다음 오류 내용은 허용한다.
-  <iframe>의 frameborder, marginwidth, marginheight, scrolling attribute
+_단, HTML5 DTD 선언 시 다음 오류 내용은 허용한다_
+<iframe>의 frameborder, marginwidth, marginheight, scrolling attribute
 
 #### 2. HTML 문서는 반드시 DTD를 선언한다.
 새로운 HTML 문서를 작성할 때 'HTML5'를 사용한다.
@@ -25,7 +25,7 @@ HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 - 문서 내에서 반드시 탭을 이용하여 들여쓰기를 하며, 탭을 대신하여 공백으로 띄어 들여쓰지 않는다.
 
 _다음의 경우 들여쓰지 않는다_
-- HTML Element의 자식 Element인 head, body
+HTML Element의 자식 Element인 head, body
 
 #### 5. 주석
 - HTML 코드의 주석은 코드 그룹을 구분하거나, 참고해야 하는 사항을 기술한다. 
