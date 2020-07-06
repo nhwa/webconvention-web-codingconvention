@@ -41,7 +41,7 @@ HTML Element의 자식 Element인 head, body
 <!-- //주석내용 -->
 
 <!-- 주석내용 -->
-<link rel="shortcut icon >
+<link rel="shortcut icon" type=”image/x-icon” href="favicon.ico" />
 ```
 
 **_너무 많은 주석은 유령문자 버그를 생성하므로 되도록 자제 한다._**
