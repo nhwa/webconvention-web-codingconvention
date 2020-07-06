@@ -57,6 +57,7 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 <h4>Q&A</h4> (X)
 <h4>Q&ampA</h4>(O)
 ```
+
 #### 7. 빈 줄
 - 의미 있는 객체를 구분하기 위하여 코드 그룹 간 1줄씩 빈 줄을 만드는 것은 허용한다. 
 - 빈 줄의 간격은 1줄을 초과하지 않는다.
@@ -70,16 +71,35 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 ```
 
 #### 8. 영문 소문자 사용
-DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성한다.
+DTD를 제외한 모든 요소와 attribute는 소문자로 작성한다.
 ```html
 <DIV Class="wrap">wrap</DIV> (X)
 <div class="wrap">wrap</div> (O)
 ```
 
+#### 9. Attribute 우선순위
+- Attribute 값은 큰 따옴표("")로 묶는다.
+- Attribute 우선순위
+| 순서 | 속성 |
+|---|:---:|
+| 1 | rel |
+| 2 | type |
+| 3 | href, src |
+| 4 | width, height |
+| 5 | target |
+| 6 | id |
+| 7 | name |
+| 8 | class |
+| 9 | style |
+| 10 | title, alt |
+| 11 | 기타 attribute |
+
+
+
 ### HTML 요소 작성 규칙
 
 #### 1. < html >
-다음과 같이 lang 애트리뷰트를 선언하며 class 애트리뷰트는 선언하지 않는다.
+다음과 같이 lang attribute를 선언하며 class attribute는 선언하지 않는다.
 ```html
 <html lang="ko">
 ```
@@ -99,7 +119,7 @@ meta, link, title, script, style 순서로 요소를 선언한다.
 ```
 
 ##### <link>
-rel, type , href 애트리뷰트를 선언한다.
+rel, type , href attribute를 선언한다.
 ```html
 <head>
   <link rel="shortcut icon" type=”image/x-icon” href="favicon.ico" />
