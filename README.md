@@ -37,7 +37,7 @@ HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 ```
 
 #### 5. 영문 소문자 사용
-DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성
+DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성한다.
 ```html
 <DIV Class="wrap"> wrap </DIV> (X)
 <div class="wrap"> wrap </div> (O)
@@ -50,7 +50,17 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 <h4> Q&A </h4> (X)
 <h4> Q&ampA </h4>(O)
 ```
-
+#### 7. 빈 줄
+의미 있는 객체를 구분하기 위하여 코드 그룹 간 1줄씩 빈 줄을 만드는 것은 허용한다. 
+빈 줄의 간격은 1줄을 초과하지 않는다.
+```html
+<head>
+  내용
+</head>
+### 빈 줄
+<body>
+</body>
+```
 
 #### BEM : Block Element Modifier
 
