@@ -80,8 +80,9 @@ DTD를 제외한 모든 요소와 attribute는 소문자로 작성한다.
 #### 9. Attribute 우선순위
 - Attribute 값은 큰 따옴표("")로 묶는다.
 - Attribute 우선순위
+
 | 순서 | 속성 |
-|---|:---:|
+|---|---:|
 | 1 | rel |
 | 2 | type |
 | 3 | href, src |
