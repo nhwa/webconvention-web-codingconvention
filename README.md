@@ -1,6 +1,6 @@
 ## coding convention
 
-### HTML 코드 작성 규칙
+### HTML Convention
 HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 
 #### 1. HTML 문서는 반드시 DTD를 선언한다.
@@ -36,7 +36,21 @@ HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 <!-- comments -->   (O) 
 ```
 
-#### 5.
+#### 5. 영문 소문자 사용
+DTD를 제외한 모든 요소와 애트리뷰트는 소문자로 작성
+```html
+<DIV Class="wrap"> wrap </DIV> (X)
+<div class="wrap"> wrap </div> (O)
+```
+
+#### 6. Character entity references (문자 엔티티 참조)를 사용
+특수 기호는 문자 엔티티 참조를 사용하여 코드로 변환한다.
+HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
+```html
+<h4> Q&A </h4> (X)
+<h4> Q&ampA </h4>(O)
+```
+
 
 #### BEM : Block Element Modifier
 
