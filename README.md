@@ -8,7 +8,7 @@ HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 #### 1. W3C Validation
 - HTML은 해당 DTD 명세에 맞게 작성하며, W3C validation을 통과해야 한다.
 - 단, HTML5 DTD 선언 시 다음 오류 내용은 허용한다.
-- <iframe>의 frameborder, marginwidth, marginheight, scrolling 애트리뷰트
+<iframe>의 frameborder, marginwidth, marginheight, scrolling 애트리뷰트
 
 #### 2. HTML 문서는 반드시 DTD를 선언한다.
 새로운 HTML 문서를 작성할 때 'HTML5'를 사용한다.
