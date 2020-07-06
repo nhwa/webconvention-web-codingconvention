@@ -2,6 +2,7 @@
 
 ## HTML Convention
 HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
+<br>
 
 ### HTML 코드 작성 규칙
 
@@ -95,8 +96,10 @@ DTD를 제외한 모든 요소와 attribute는 소문자로 작성한다.
 | 10 | title, alt |
 | 11 | 기타 attribute |
 
-
-
+```html
+<a href="#" target="_blank" id="linkId" class="link" style="display:block;" title="링크가기">링크</a>
+```
+<br>
 ### HTML 요소 작성 규칙
 
 #### 1. < html >
