@@ -1,7 +1,9 @@
-## coding convention
+# coding convention
 
-### HTML Convention
+## HTML Convention
 HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
+
+### HTML 코드 작성 규칙
 
 #### 1. HTML 문서는 반드시 DTD를 선언한다.
 새로운 HTML 문서를 작성할 때 'HTML5'를 사용한다.
@@ -57,10 +59,12 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 <head>
   내용
 </head>
-### 빈 줄
+# 빈 줄
 <body>
 </body>
 ```
+
+#### 8.
 
 #### BEM : Block Element Modifier
 
