@@ -1,4 +1,4 @@
-# coding convention
+# Coding Convention
 
 ## HTML Convention
 HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
