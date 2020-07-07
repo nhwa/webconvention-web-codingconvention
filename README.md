@@ -101,6 +101,7 @@ DTD를 제외한 모든 요소와 attribute는 소문자로 작성한다.
 <a href="#" target="_blank" id="linkId" class="link" style="display:block;" title="링크가기">링크</a>
 ```
 <br>
+<br>
 
 ### HTML 요소 작성 규칙
 
@@ -134,6 +135,9 @@ rel, type , href attribute를 선언한다.
 
 #### 3.
 
+## naming Convention
+
+
 
   
 
@@ -145,6 +149,16 @@ rel, type , href attribute를 선언한다.
 ```html
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 ```
+
+#### 
+  
+#### 2. css 가이드
+- 외부 스타일 시트를 적용하는 경우 charset을 표기한다.
+```html
+@charset "utf-8"
+```
+
+- css 스타일 속성간 
 
 ## Javascript Convention
 
