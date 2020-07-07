@@ -169,10 +169,13 @@ rel, type , href attribute를 선언한다.
 ```
 ### BEM 네이밍 규칙을 사용한다.
 **BEM : Block Element Modifier**
+
 ex) .block__element--modifier
 
 block : 전체를 감싸고 있는 블록요소 (Header, Nav, Footer)
+
 element : 내부요소
+
 modifier : 기능
 
 ```css
