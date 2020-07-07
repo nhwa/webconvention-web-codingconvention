@@ -7,22 +7,31 @@ HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 <br>
 ## HTML 코드 작성 규칙
 
-### 기본 규칙
+### 1. 기본 규칙
 
-#### 1. W3C Validation
+#### 1) W3C Validation
 - HTML은 해당 DTD 명세에 맞게 작성하며, W3C validation을 통과해야 한다.
 
 _단, HTML5 DTD 선언 시 다음 오류 내용은 허용한다_
 - <iframe>의 frameborder, marginwidth, marginheight, scrolling attribute
   
-#### 2. 영문 소문자 사용
+#### 2) 영문 소문자 사용
 DTD를 제외한 모든 요소와 attribute는 소문자로 작성한다.
 ```html
 <DIV Class="wrap">wrap</DIV> (X)
 <div class="wrap">wrap</div> (O)
 ```
 
-#### 3. Attribute값 표기
+#### 3) 모든 HTML 요소 닫기
+모든 HTML 요소를 닫는다.
+```html
+<section>
+  <p>This is a paragraph.      (X)
+  <p>This is a paragraph.</p>  (O)
+</section>
+```
+
+#### 4) Attribute값 표기
 - Attribute 값은 큰 따옴표("")로 묶는다.
 - Attribute 우선순위
 
@@ -44,7 +53,7 @@ DTD를 제외한 모든 요소와 attribute는 소문자로 작성한다.
 <a href="#" target="_blank" id="linkId" class="link" style="display:block;" title="링크가기">링크</a>
 ```
 
-#### 4. Character entity references (문자 엔티티 참조)를 사용
+#### 5) Character entity references (문자 엔티티 참조)를 사용
 특수 기호는 문자 엔티티 참조를 사용하여 코드로 변환한다.
 HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 ```html
@@ -52,7 +61,7 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 <h4>Q&ampA</h4>(O)
 ```
 
-#### 5. 빈 줄
+#### 6) 빈 줄
 - 의미 있는 객체를 구분하기 위하여 코드 그룹 간 1줄씩 빈 줄을 만드는 것은 허용한다. 
 - 빈 줄의 간격은 1줄을 초과하지 않는다.
 ```html
@@ -64,34 +73,39 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 </body>
 ```
 
-### DTD 및 인코딩
+### 2. DTD 및 인코딩
 
-#### 1. HTML 문서는 반드시 DTD를 선언한다.
+#### 1) HTML 문서는 반드시 DTD를 선언한다.
 새로운 HTML 문서를 작성할 때 'HTML5'를 사용한다.
 ```html
 <!DOCTYPE html>
 ```
 
-#### 2. 인코딩 선언
+#### 2) 인코딩 선언
 신규 HTML 문서를 작성할 때 기본 인코딩은 utf-8을 원칙으로 한다.
 ```html
 <meta charset="utf-8">
 ```
 
-### 들여쓰기 
+### 3. 뷰포트 설정
+뷰포트는 웹페이지 사용자가 볼 수 있는 영역으로 모든 웹페이지에 다음과 같은 뷰포트 요소를 포함한다.
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+### 6. IE 호환모드 설정
+인터넷 익스플로러가 항상 최신 버전의 레이아웃 엔진을 사용하여 문서를 렌더링하도록 지정한다.
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
+### 5. 들여쓰기 
 - 마크업의 중첩이 깊어질 때마다 자식 요소는 1탭을 들여 쓰고, 탭 1개의 크기는 공백 2칸으로 설정한다.
 - 문서 내에서 반드시 탭을 이용하여 들여쓰기를 하며, 탭을 대신하여 공백으로 띄어 들여쓰지 않는다.
 
 _다음의 경우 들여쓰지 않는다_
 - HTML Element의 자식 Element인 head, body
 
-### IE 호환모드 설정
-인터넷 익스플로러가 항상 최신 버전의 레이아웃 엔진을 사용하여 문서를 렌더링하도록 지정합니다.
-```html
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-```
-
-### 주석 
+### 6. 주석 
 - HTML 코드의 주석은 코드 그룹을 구분하거나, 참고해야 하는 사항을 기술한다. 
 - HTML 주석의 시작과 종료는 아래와 같이 표기, 기본 형식에 맞게 작성한다.
 ```html
@@ -105,6 +119,11 @@ _다음의 경우 들여쓰지 않는다_
 
 <!-- 주석내용 -->
 <link rel="shortcut icon" type=”image/x-icon” href="favicon.ico" />
+
+<!-- 
+  두줄 이상에 걸쳐 있는 주석은 이와 같이 작성한다.
+  두줄 이상에 걸쳐 있는 주석은 이와 같이 작성한다.
+-->
 ```
 
 **_너무 많은 주석은 유령문자 버그를 생성하므로 되도록 자제 한다._**
@@ -119,10 +138,7 @@ _다음의 경우 들여쓰지 않는다_
 ## HTML 요소 작성 규칙
 
 ### 1. `<html>`
-다음과 같이 lang attribute를 선언하며 class attribute는 선언하지 않는다.
-영어 : en
-한국어 : ko
-일본어 : ja
+다음과 같이 lang attribute를 선언한다.
 ```html
 <html lang="ko">
 ```
@@ -160,7 +176,7 @@ rel, type , href attribute를 선언한다.
 
 ## CSS 네이밍 규칙
 
-### 단어와 단어를 연결할때 하이픈(-) 기호를 사용한다.
+### 하이픈(-) 기호를 구분자로 사용한다.
 ```css
 #main-contents {
   position: absolute;
@@ -169,14 +185,11 @@ rel, type , href attribute를 선언한다.
 ```
 ### BEM 네이밍 규칙을 사용한다.
 **BEM : Block Element Modifier**
+#### ex) .block__element--modifier
 
-ex) .block__element--modifier
-
-block : 전체를 감싸고 있는 블록요소 (Header, Nav, Footer)
-
-element : 내부요소
-
-modifier : 기능
+#### block : 전체를 감싸고 있는 블록요소 (Header, Nav, Footer)
+#### element : 내부요소
+#### modifier : 기능
 
 ```css
 .stick-man__head--small { 
@@ -186,6 +199,21 @@ modifier : 기능
 
 }
 ```
+
+
+## 파일 및 폴더 네이밍 규칙
+
+### 영문 소문자, 숫자, 언더스코어(`_`)만 사용한다
+### 형태_의미_순서_상태를 기본 순서로 사용한다.
+### 한자리 정수는 사용하지 않으며 01,02와 같이 사용한다.
+
+| 분류 | 예제 | 설명 |
+|---|---|---|
+| HTML | weniv.html | '페이지영문이름.html'로 사용
+| CSS | weniv.css | '서비스영문이름.css'로 사용
+| Folder | images, css, js | 'image, css, javascript 폴더 사용'
+
+
 
 <br>
 <br>
@@ -205,25 +233,40 @@ CSS 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 
 ## CSS 코드 작성 규칙
 
-### 기본 규칙 
+### 1. 기본 규칙 
 
-#### 1. W3C Validation 
+#### 1) W3C Validation 
 CSS는 CSS3 속성을 제외하고 W3C validation을 통과해야 한다. 
 
-#### 2. 영문 소문자 사용
+#### 2) 영문 소문자 사용
 모든 속성은 영문 소문자로만 작성한다.
 
-#### 3.
+#### 3) 세미콜론 사용
+선언들을 세미콜론(;)으로 구분하
 
-### 들여쓰기
-- 마크업의 중첩이 깊어질 때마다 자식 요소는 1탭을 들여 쓰고, 탭 1개의 크기는 공백 2칸으로 설정한다.
-- 문서 내에서 반드시 탭을 이용하여 들여쓰기를 하며, 탭을 대신하여 공백으로 띄어 들여쓰지 않는다.
+### 2. 들여쓰기
+- 들여쓰기는 
+
+
+### 3. 주석 
+- CSS의 주석은 코드 그룹을 구분하거나, 참고해야 하는 사항을 기술한다. 
+- CSS 주석의 시작과 종료는 아래와 같이 표기, 기본 형식에 맞게 작성한다.
+- CSS 주석 기호(`/*`, `*/`)와 내용 사이에는 반드시 공백 한칸이 있어야 한다.
+```css
+/* maon-contents 영역 */
+#main-contents {
+  position: absolute;
+  top: 40px;
+}
+```
 
 - css 스타일 속성간 
 
-## Javascript Convention
-
-#### 1. javascript 연결 방법
+# Javascript Convention
+Javascript 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
+<br>
+<br>
+## javascript 연결 방법
 - 기본적으로 외부 자바스크립트 파일을 사용하는 것을 원칙으로 하며, type, src 순으로 작성한다.
 - 코드의 양이 많지 않은 경우 내부 스크립트 코드로 작성한다.
 ```html
