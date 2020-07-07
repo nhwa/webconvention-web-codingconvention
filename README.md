@@ -1,11 +1,12 @@
-Coding Convention
+<h1>Coding Convention</h1>
 
 # HTML Convention
 HTML 코드를 작성할때 다음과 같은 기본 규칙을 준수한다.
 <br>
-
+<br>
 ## HTML 코드 작성 규칙
-
+<br>
+<br>
 ### 기본 규칙
 
 #### 1. W3C Validation
