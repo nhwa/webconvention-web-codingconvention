@@ -93,7 +93,7 @@ HTML 5의 Character references : https://dev.w3.org/html5/html-author/charref
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-### 6. IE 호환모드 설정
+### 4. IE 호환모드 설정
 인터넷 익스플로러가 항상 최신 버전의 레이아웃 엔진을 사용하여 문서를 렌더링하도록 지정한다.
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -174,7 +174,8 @@ rel, type , href attribute를 선언한다.
 - Naming에 영어, 숫자, 하이픈(`-`), 언더스코어(`_`)만 사용한다
 - Naming의 첫 시작은 영문 소문자로만 시작한다.
 
-## CSS 네이밍 규칙
+## CSS 네이밍 규칙 
+CSS 언어는 기본적으로 소문자 + 하이픈(`-`)을 사용해 표현하는 구문의 언어이다.
 
 ### 하이픈(-) 기호를 구분자로 사용한다.
 ```css
@@ -200,21 +201,25 @@ rel, type , href attribute를 선언한다.
 }
 ```
 
-
 ## 파일 및 폴더 네이밍 규칙
 
 ### 영문 소문자, 숫자, 언더스코어(`_`)만 사용한다
 ### 형태_의미_순서_상태를 기본 순서로 사용한다.
-### 한자리 정수는 사용하지 않으며 01,02와 같이 사용한다.
+### 한자리 정수는 사용하지 않으며 01, 02와 같이 사용한다.
+
+ex)
+bg_sea_nosns.png
+bg_sea_withsns.png
+bg_jeju.png
+bg_jeju_nomountain.png
+frame_bird_01.png
+frame_bird_02.png
 
 | 분류 | 예제 | 설명 |
 |---|---|---|
 | HTML | weniv.html | '페이지영문이름.html'로 사용
 | CSS | weniv.css | '서비스영문이름.css'로 사용
 | Folder | images, css, js | 'image, css, javascript 폴더 사용'
-
-
-
 <br>
 <br>
 
