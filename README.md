@@ -1,4 +1,4 @@
-<h1>Coding Convention</h1>
+<h1>Web Coding Convention</h1>
 <br>
 
 # HTML Convention
